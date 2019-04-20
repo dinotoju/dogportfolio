@@ -51,7 +51,6 @@ var TxtType = function(el, toRotate, period) {
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
@@ -106,4 +105,44 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+	
 }
+
+
+//FORM VALIDATION
+
+    function checkForm(){
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var request = document.getElementById("request").value;
+		var isValid = true;
+		
+		if (name.length == 0) {
+    			document.getElementById("nameError").style.display = "block";
+				console.log("name not there");
+				isValid = false;	
+		} 
+		else {document.getElementById("nameError").style.display = "none";}
+		
+		
+		if (email.length == 0) {
+			document.getElementById("emailError").style.display = "block";
+			console.log("address not there");
+			isValid = false;
+
+		} 
+		
+		else {document.getElementById("emailError").style.display = "none";}
+		
+		if (request.length == 0) {
+			document.getElementById("requestError").style.display = "block";
+			console.log("address not there");
+			isValid = false;
+
+		} 
+		
+		else {document.getElementById("requestError").style.display = "none";}
+			
+		return isValid;
+
+			}

@@ -7,7 +7,6 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:200,400,600" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="icon" type="img/png" href="images/paw.png">
 	<title>Dogs</title>
 </head>
@@ -31,13 +30,15 @@
 	<p>Send me an email with the details of your inquiry, and I will respond within 24 hours!</p></div>
 
 <div class="form">
-<form method="POST" action="https://formspree.io/julia@juliadinoto.com">
+<form method="POST" action="https://formspree.io/julia@juliadinoto.com" onsubmit="return checkForm();">
 
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name">
+	<p class="errorMsg" id="nameError">Please enter your name above!</p>
 
     <label for="email">Email</label>
     <input type="text" id="email" name="email" placeholder="Your email">
+	<p class="errorMsg" id="emailError">Please enter your email above!</p>
 
     <label for="service">Service</label>
     <select id="service" name="service">
@@ -46,8 +47,9 @@
       <option value="boarding">Boarding</option>
     </select>
 
-    <label for="subject">Request details</label>
-    <textarea id="subject" name="subject" placeholder="Please include the date, time, breed, and any other special notes that may be helpful." style="height:200px"></textarea>
+    <label for="request">Request details</label>
+    <textarea id="request" name="request" placeholder="Please include the date, time, breed, and any other special notes that may be helpful." style="height:200px"></textarea>
+	<p class="errorMsg" id="requestError">Please enter your message above!</p>
 
     <input type="submit" value="Submit">
 
@@ -57,5 +59,6 @@
 <footer>
 	Designed and coded by Julia Dinoto 🐾 2019
 </footer>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -47,6 +47,12 @@ a{
 	color:#09093d;
 }
 
+.errorMsg{
+	color: red;
+	font-size: .75em;
+	display: none;
+}
+
 .current{
 	font-weight: bold;
 	text-decoration: underline;
