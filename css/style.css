@@ -16,6 +16,10 @@ h1{
 	font-size: 3.5em;
 }
 
+.typewrite {
+	display: none;
+}
+
 h2{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
@@ -110,7 +114,7 @@ a.skip:focus{
 /* Hero image code adapted from https://www.w3schools.com/howto/howto_css_hero_image.asp */
 
 .banner {
-    background-image: url("../images/Untitled-4.svg");
+/*    background-image: url("../images/Untitled-4.svg");*/
     height: 100vh;
 	width: 100%;
     background-position: center;
@@ -121,12 +125,12 @@ a.skip:focus{
 
 .banner-text {
 	display: inline;
-	text-align: left;
+	text-align: center;
 	position: absolute;
-	width: 40%;
-	top: 30%;
-	left: 0;
-	margin: 0px 25px;
+	top: 50%;
+	left: 50%;
+/*	margin: 0px 25px;*/
+	
 	}
 
 .parallax {
@@ -158,7 +162,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  list-style-type: none;
+  list-style-type:none;
 }
 nav ul li a {
   display: block;
@@ -358,7 +362,7 @@ nav ul li a:hover {
 	width: auto;
 	height: 50px;
 	color: #fff;
-	background-color:#f85949;
+	background-color:#dc1a08;
 	border-radius: 45px;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
@@ -407,7 +411,7 @@ input[type=submit] {
 	width: auto;
 	height: 50px;
 	color: #fff;
-	background-color:#f85949;
+	background-color:#dc1a08;
 	border-radius: 45px;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
@@ -419,7 +423,7 @@ input[type=submit] {
 	padding-right: 20px;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+
 input[type=submit]:hover {
     background-color:#fe1108;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -439,8 +443,41 @@ input[type=submit]:focus {
 width: 80%;
 	margin: 0 auto;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color:#f2f3f4;
   padding: 20px;
 }
 
 /*MEDIA QUERIES*/
+
+@media only screen and (min-width : 768px){	
+	.banner {
+    background-image: url("../images/Untitled-4.svg");
+    height: 100vh;
+	width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:auto;
+	display: block;
+}
+	
+	.banner-text {
+	display: inline;
+	text-align: left;
+	position: absolute;
+	width: 40%;
+	top: 30%;
+	left: 0;
+	margin: 0px 25px;
+		
+	}
+	
+.typewrite{
+	display:inline;
+}	
+
+	.type{
+		display: none;
+	}
+	
+
+}
