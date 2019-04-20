@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:200,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="icon" type="img/png" href="images/paw.png">
+	<title>Dogs</title>
+</head>
+<body>
+	
+<header>
+	<a href="#content" class="skip">Skip to content</a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="logo"><img src="images/paw.png" alt="Pawprint logo"></a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="mydogs.html">My Dogs</a></li>
+				<li><a href="pricing.html">Pricing</a></li>
+				<li><a href="booking.html" class="current">Booking</a></li>
+				<li><a href="docs/wag_flyer.pdf" target="_blank">$25 Promo</a></li>
+			</ul>
+		</nav>
+</header>
+<div class="bodycontent">
+	<h1>Book a Service</h1>
+	<p>Send me an email with the details of your inquiry, and I will respond within 24 hours!</p></div>
+
+<div class="form">
+<form method="POST" action="https://formspree.io/julia@juliadinoto.com">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email">
+
+    <label for="service">Service</label>
+    <select id="service" name="service">
+      <option value="walking">Walking</option>
+      <option value="sitting">Sitting</option>
+      <option value="boarding">Boarding</option>
+    </select>
+
+    <label for="subject">Request details</label>
+    <textarea id="subject" name="subject" placeholder="Please include the date, time, breed, and any other special notes that may be helpful." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+<div class="bodycontent"></div>
+<footer>
+	Designed and coded by Julia Dinoto 🐾 2019
+</footer>
+</body>
+</html>
