@@ -2,23 +2,21 @@
 /* CSS Document */
 
 /*TYPE & COLOR*/
-*{ 
-	Box-sizing: Border-box;
-}
+*{ Box-sizing: Border-box;}
+
+p::-moz-selection { background: #DFE6F5;}
+body::selection { background: #DFE6F5; }
 
 html, body{
 	height: 100%;
 }
 
 h1{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 3.5em;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 3.5em;
 }
 
-.typewrite {
-	display: none;
-}
 
 h2{
 	font-family: 'Poppins', sans-serif;
@@ -42,13 +40,16 @@ h3{
 body{
 	font-family: 'PT Serif', serif;
 	color: #09093d;
-	font-size: 15px;
-	line-height: 1.5;
-/*	background-color: #f2f3f4;*/
+	font-size: 14px;
+	line-height: 2;
 }
 
 a{
 	color:#09093d;
+}
+
+.type{
+	display: none;
 }
 
 .errorMsg{
@@ -59,7 +60,8 @@ a{
 
 .current{
 	font-weight: bold;
-	text-decoration: underline;
+	text-decoration: none;
+	
 }
 
 .maincontent{
@@ -114,7 +116,7 @@ a.skip:focus{
 /* Hero image code adapted from https://www.w3schools.com/howto/howto_css_hero_image.asp */
 
 .banner {
-/*    background-image: url("../images/Untitled-4.svg");*/
+    background-image: url("../images/Untitled-4.svg");
     height: 100vh;
 	width: 100%;
     background-position: center;
@@ -122,16 +124,17 @@ a.skip:focus{
     background-size:auto;
 	display: block;
 }
-
+	
 .banner-text {
 	display: inline;
-	text-align: center;
+	text-align: left;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-/*	margin: 0px 25px;*/
-	
-	}
+	width: 40%;
+	top: 30%;
+	left: 0;
+	margin: 0px 25px;
+
+}
 
 .parallax {
 		display: block;
@@ -158,30 +161,57 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+	
 }
 
 nav ul li {
   display: inline-block;
   list-style-type:none;
+	
 }
 nav ul li a {
   display: block;
-  line-height: 2em;
+  line-height: 3em;
   padding: 1em 1em;
   text-decoration: none;
+  bottom: 0px;
 
 }
+
 nav ul li:first-child {
   margin-right: auto;
 }
 nav ul li a.logo {
   padding: 10px;
 }
+nav ul li a.current {
+	border-bottom: 3px solid #09093d; 
+}
+
+
 nav ul li a:hover {
+	border-bottom: 3px solid #09093d;
+	
+}
+
+nav ul li a:focus {
+	border-bottom: 3px solid #09093d;
+}
+
+nav ul li a.logo:hover {
+	border-bottom: 0px;
+}
+
+nav ul li a.logo:focus {
+	border-bottom: 0px;
 }
 
 .logo img {
-	height: 30px;
+	height: 40px;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 /*FLEX GRIDS*/
@@ -309,33 +339,25 @@ nav ul li a:hover {
   width: 100%;
   background-color:#f2f3f4;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-/*  line-height: 250px;*/
   color: #03446A;
   text-align: center;
   backface-visibility: hidden;
 }
 
 .back {
-  background-color:#f85949;
+  background-color:#fe1108;
   color: white;
   transform: rotateY( 180deg );
-/*  margin: 10px;*/
   text-align: center;
+  padding-top: 25%;
+
+
 }
 
 /*FILTERING*/
 /*https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
 
 .filterDiv {
-/*
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-*/
   display: none; /* Hidden by default */
 }
 
@@ -347,7 +369,7 @@ nav ul li a:hover {
 
 /* Add a dark background to the active button */
 .button.active {
-  background-color:#fe1108;
+  background-color:#fe1108; 
   color: white;
 }
 
@@ -359,10 +381,10 @@ nav ul li a:hover {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	font-size: 1.025em;
-	width: auto;
-	height: 50px;
+	width: 200px;
+	height: auto;
 	color: #fff;
-	background-color:#dc1a08;
+	background-color:#f85949;
 	border-radius: 45px;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
@@ -372,20 +394,22 @@ nav ul li a:hover {
 	margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
   }
 
 .button:hover {
-  background-color:#fe1108;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  transform: translateY(-5px);
+	background-color:#fe1108; 
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	transform: translateY(-5px);
 }
 
 .button:focus {
-  background-color:#fe1108;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  transform: translateY(-5px);
+	background-color:#fe1108;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	transform: translateY(-5px);
 }
 
 /*FORMS*/
@@ -403,54 +427,21 @@ input[type=text], select, textarea {
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
- font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 1.025em;
-	width: auto;
-	height: 50px;
-	color: #fff;
-	background-color:#dc1a08;
-	border-radius: 45px;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease 0s;
-	cursor: pointer;
-	outline: none;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-
-input[type=submit]:hover {
-    background-color:#fe1108;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-input[type=submit]:focus {
-    background-color:#fe1108;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  transform: translateY(-5px);
-}
-
 /* Add a background color and some padding around the form */
 .form {
-width: 80%;
+	width: 80%;
 	margin: 0 auto;
-  border-radius: 5px;
-  background-color:#f2f3f4;
-  padding: 20px;
+	border-radius: 5px;
+	background-color:#f2f3f4;
+	padding: 25px;
 }
 
 /*MEDIA QUERIES*/
 
+
+/*
 @media only screen and (min-width : 768px){	
-	.banner {
+.banner {
     background-image: url("../images/Untitled-4.svg");
     height: 100vh;
 	width: 100%;
@@ -460,7 +451,7 @@ width: 80%;
 	display: block;
 }
 	
-	.banner-text {
+.banner-text {
 	display: inline;
 	text-align: left;
 	position: absolute;
@@ -468,16 +459,8 @@ width: 80%;
 	top: 30%;
 	left: 0;
 	margin: 0px 25px;
-		
-	}
-	
-.typewrite{
-	display:inline;
-}	
-
-	.type{
-		display: none;
-	}
-	
 
 }
+		
+
+}*/

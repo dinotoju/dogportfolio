@@ -1,4 +1,18 @@
-//Typrerwiter effect
+//Nav
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction(){
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav"){
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+
+//Typerwiter effect
 //https://codepen.io/hi-im-si/pen/DHoup
 
 var TxtType = function(el, toRotate, period) {
